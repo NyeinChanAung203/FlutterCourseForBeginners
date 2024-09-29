@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/ex_2_loginUI/sign_in.dart';
+import 'package:flutter_course/ex3_movieUI/movie_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Flutter Course',
       debugShowCheckedModeBanner: false,
-      home: SignIn(),
+      home: MoviePage(),
     );
   }
 }
