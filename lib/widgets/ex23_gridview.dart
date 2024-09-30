@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Ex24Gridview extends StatelessWidget {
-  const Ex24Gridview({super.key});
+class Ex23Gridview extends StatelessWidget {
+  const Ex23Gridview({super.key});
 
   @override
   Widget build(BuildContext context) {

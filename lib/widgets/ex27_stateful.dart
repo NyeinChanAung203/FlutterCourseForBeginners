@@ -19,14 +19,14 @@ Stateful Widgets
 
 import 'package:flutter/material.dart';
 
-class Ex28Stateful extends StatefulWidget {
-  const Ex28Stateful({super.key});
+class Ex27Stateful extends StatefulWidget {
+  const Ex27Stateful({super.key});
 
   @override
-  State<Ex28Stateful> createState() => _Ex28StatefulState();
+  State<Ex27Stateful> createState() => _Ex27StatefulState();
 }
 
-class _Ex28StatefulState extends State<Ex28Stateful> {
+class _Ex27StatefulState extends State<Ex27Stateful> {
   int number = 1;
 
   @override

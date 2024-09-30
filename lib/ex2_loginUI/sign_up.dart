@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/ex_2_loginUI/sign_up.dart';
-import 'package:flutter_course/ex_2_loginUI/widgets.dart';
+import 'package:flutter_course/ex2_loginUI/sign_in.dart';
+import 'package:flutter_course/ex2_loginUI/widgets.dart';
 
-class SignIn extends StatelessWidget {
-  const SignIn({super.key});
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,39 +12,23 @@ class SignIn extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Positioned(
-            right: -40,
-            top: -80,
+            right: 40,
+            top: -90,
             child: CircleAvatar(
               backgroundColor: Colors.indigo.shade100,
-              radius: 85,
-            ),
-          ),
-          const Positioned(
-            right: -40,
-            top: -80,
-            child: CircleAvatar(
-              backgroundColor: Colors.indigo,
               radius: 75,
             ),
           ),
-          Positioned(
-            left: 24,
-            bottom: -110,
-            child: CircleAvatar(
-              backgroundColor: Colors.indigo.shade100,
-              radius: 85,
-            ),
-          ),
           const Positioned(
-            left: 20,
-            bottom: -105,
+            right: 60,
+            top: -100,
             child: CircleAvatar(
               backgroundColor: Colors.indigo,
               radius: 75,
             ),
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
                   alignment: Alignment.centerLeft,
@@ -56,7 +40,7 @@ class SignIn extends StatelessWidget {
                       blurStyle: BlurStyle.outer,
                     ),
                   ]),
-                  margin: const EdgeInsets.only(right: 40),
+                  margin: const EdgeInsets.only(right: 40, bottom: 40),
                   padding: const EdgeInsets.symmetric(
                     horizontal: 24,
                     vertical: 28,
@@ -66,7 +50,7 @@ class SignIn extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       const Text(
-                        "SIGN IN",
+                        "SIGN UP",
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
@@ -80,27 +64,31 @@ class SignIn extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       const MyTextField(
+                        hintText: 'Email',
+                        iconData: Icons.email,
+                      ),
+                      const SizedBox(height: 20),
+                      const MyTextField(
+                        hintText: 'Mobile Number',
+                        iconData: Icons.phone,
+                      ),
+                      const SizedBox(height: 20),
+                      const MyTextField(
                         hintText: 'Password',
                         iconData: Icons.lock,
                         isObsecureText: true,
                       ),
                       const SizedBox(height: 20),
-                      MyButton(text: 'SIGN UP', onPressed: () {}),
-                      const SizedBox(height: 16),
-                      const Text(
-                        "Forgot Password?",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.grey,
-                        ),
+                      MyButton(
+                        text: 'SIGN UP',
+                        onPressed: () {},
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 32),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Text(
-                            "Don't have an account? ",
+                            "Already have an account? ",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 12,
@@ -111,10 +99,10 @@ class SignIn extends StatelessWidget {
                               onPressed: () {
                                 Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                        builder: (_) => const SignUp()));
+                                        builder: (_) => const SignIn()));
                               },
                               child: const Text(
-                                "SIGN UP",
+                                "SIGN IN",
                               ))
                         ],
                       )

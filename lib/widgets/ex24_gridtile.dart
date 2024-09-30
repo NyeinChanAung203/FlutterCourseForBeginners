@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Ex25Gridtile extends StatelessWidget {
-  const Ex25Gridtile({super.key});
+class Ex24Gridtile extends StatelessWidget {
+  const Ex24Gridtile({super.key});
 
   @override
   Widget build(BuildContext context) {

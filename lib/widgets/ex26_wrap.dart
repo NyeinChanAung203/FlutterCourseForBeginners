@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Ex27Wrap extends StatelessWidget {
-  const Ex27Wrap({super.key});
+class Ex26Wrap extends StatelessWidget {
+  const Ex26Wrap({super.key});
 
   @override
   Widget build(BuildContext context) {

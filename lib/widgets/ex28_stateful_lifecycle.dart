@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_course/widgets/ex29_part.dart';
+import 'package:flutter_course/widgets/ex27_part.dart';
 
-class Ex29StatefulLifecycle extends StatefulWidget {
-  const Ex29StatefulLifecycle({super.key});
+class Ex28StatefulLifecycle extends StatefulWidget {
+  const Ex28StatefulLifecycle({super.key});
 
   @override
-  State<Ex29StatefulLifecycle> createState() => _Ex29StatefulLifecycleState();
+  State<Ex28StatefulLifecycle> createState() => _Ex28StatefulLifecycleState();
 }
 
-class _Ex29StatefulLifecycleState extends State<Ex29StatefulLifecycle> {
+class _Ex28StatefulLifecycleState extends State<Ex28StatefulLifecycle> {
   int number = 1;
 
   @override
@@ -66,7 +66,7 @@ class _Ex29StatefulLifecycleState extends State<Ex29StatefulLifecycle> {
   }
 
   @override
-  void didUpdateWidget(covariant Ex29StatefulLifecycle oldWidget) {
+  void didUpdateWidget(covariant Ex28StatefulLifecycle oldWidget) {
     debugPrint("didUpdateWidget $number");
     super.didUpdateWidget(oldWidget);
   }
