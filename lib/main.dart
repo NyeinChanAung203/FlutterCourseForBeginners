@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/widgets/ex60_daterange.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Flutter Course',
       debugShowCheckedModeBanner: false,
-      home: Ex60DateRangePicker(),
+      // home: NoteListScreen(),
     );
   }
 }
