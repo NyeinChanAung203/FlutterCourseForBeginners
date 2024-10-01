@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course/note_app/constants/colors.dart';
 import 'package:flutter_course/note_app/model/note.dart';
+import 'package:flutter_course/note_app/provider/service_provider.dart';
 import 'package:flutter_course/note_app/service/note_service.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
@@ -9,10 +10,8 @@ class NoteEditorScreen extends StatefulWidget {
   const NoteEditorScreen({
     super.key,
     this.note,
-    required this.noteService,
   });
   final Note? note;
-  final NoteService noteService;
 
   @override
   State<NoteEditorScreen> createState() => _NoteEditorScreenState();
@@ -47,6 +46,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final NoteService noteService = ServiceProvider.of(context)!.noteService;
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -76,7 +76,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                 );
 
                 if (result == true) {
-                  widget.noteService.deleteNote(widget.note!);
+                  noteService.deleteNote(widget.note!);
                   if (context.mounted) {
                     Navigator.of(context).popUntil((route) => route.isFirst);
                   }
@@ -100,7 +100,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                     DateTime.now(),
                     currentColor.value,
                   );
-                  widget.noteService.updateNote(note);
+                  noteService.updateNote(note);
                 } else {
                   // add new
                   note = Note(
@@ -110,7 +110,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                     DateTime.now(),
                     currentColor.value,
                   );
-                  widget.noteService.addNote(note);
+                  noteService.addNote(note);
                 }
 
                 debugPrint(note.toString());

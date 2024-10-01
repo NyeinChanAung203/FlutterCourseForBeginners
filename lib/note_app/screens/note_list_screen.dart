@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course/note_app/model/note.dart';
+import 'package:flutter_course/note_app/provider/service_provider.dart';
 import 'package:flutter_course/note_app/screens/note_editor_screen.dart';
 import 'package:flutter_course/note_app/screens/note_search.dart';
 import 'package:flutter_course/note_app/service/note_service.dart';
@@ -7,12 +8,11 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:intl/intl.dart';
 
 class NoteListScreen extends StatelessWidget {
-  const NoteListScreen({super.key, required this.noteService});
-
-  final NoteService noteService;
+  const NoteListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final NoteService noteService = ServiceProvider.of(context)!.noteService;
     return Scaffold(
       appBar: AppBar(
         title: const Text("Notes"),
@@ -20,9 +20,7 @@ class NoteListScreen extends StatelessWidget {
           IconButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
-                builder: (_) => NoteSearch(
-                  noteService: noteService,
-                ),
+                builder: (_) => const NoteSearch(),
               ));
             },
             icon: const Icon(Icons.search),
@@ -32,9 +30,7 @@ class NoteListScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(
-            builder: (_) => NoteEditorScreen(
-              noteService: noteService,
-            ),
+            builder: (_) => const NoteEditorScreen(),
           ));
         },
         shape: const OvalBorder(),
@@ -70,7 +66,6 @@ class NoteListScreen extends StatelessWidget {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (_) => NoteEditorScreen(
                         note: allNotes[index],
-                        noteService: noteService,
                       ),
                     ));
                   },
