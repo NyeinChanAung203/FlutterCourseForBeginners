@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/note_app/colors.dart';
-import 'package:flutter_course/note_app/note.dart';
+import 'package:flutter_course/note_app/constants/colors.dart';
+import 'package:flutter_course/note_app/model/note.dart';
+import 'package:flutter_course/note_app/service/note_service.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 
 class NoteEditorScreen extends StatefulWidget {
-  const NoteEditorScreen({super.key, this.note});
+  const NoteEditorScreen({
+    super.key,
+    this.note,
+    required this.noteService,
+  });
   final Note? note;
+  final NoteService noteService;
 
   @override
   State<NoteEditorScreen> createState() => _NoteEditorScreenState();
@@ -44,6 +50,40 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
     return Scaffold(
       appBar: AppBar(
         actions: [
+          if (widget.note != null)
+            IconButton(
+              onPressed: () async {
+                final result = await showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    title: const Text("Are you sure ?"),
+                    content:
+                        const Text("Do you really want to delete this note?"),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pop(false);
+                        },
+                        child: const Text("Cancel"),
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).pop(true);
+                          },
+                          child: const Text("OK")),
+                    ],
+                  ),
+                );
+
+                if (result == true) {
+                  widget.noteService.deleteNote(widget.note!);
+                  if (context.mounted) {
+                    Navigator.of(context).popUntil((route) => route.isFirst);
+                  }
+                }
+              },
+              icon: const Icon(Icons.delete),
+            ),
           IconButton(
             onPressed: () {
               if (_titleController.text.trim().isNotEmpty &&
@@ -54,25 +94,27 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                 if (widget.note != null) {
                   // update
                   note = Note(
-                    id: widget.note!.id,
-                    title: _titleController.text.trim(),
-                    content: _contentController.text.trim(),
-                    created: DateTime.now(),
-                    color: currentColor.value,
+                    widget.note!.id,
+                    _titleController.text.trim(),
+                    _contentController.text.trim(),
+                    DateTime.now(),
+                    currentColor.value,
                   );
+                  widget.noteService.updateNote(note);
                 } else {
                   // add new
                   note = Note(
-                    id: const Uuid().v4(),
-                    title: _titleController.text.trim(),
-                    content: _contentController.text.trim(),
-                    created: DateTime.now(),
-                    color: currentColor.value,
+                    const Uuid().v4(),
+                    _titleController.text.trim(),
+                    _contentController.text.trim(),
+                    DateTime.now(),
+                    currentColor.value,
                   );
+                  widget.noteService.addNote(note);
                 }
 
                 debugPrint(note.toString());
-                Navigator.of(context).pop(note);
+                Navigator.of(context).popUntil((route) => route.isFirst);
               }
             },
             icon: const Icon(Icons.save),
