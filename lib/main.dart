@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course/widgets/ex62_streambuilder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Flutter Course',
       debugShowCheckedModeBanner: false,
-      // home: NoteListScreen(),
+      home: Ex62Streambuilder(),
     );
   }
 }
