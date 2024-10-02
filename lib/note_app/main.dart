@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course/note_app/model/note.dart';
 import 'package:flutter_course/note_app/provider/service_provider.dart';
-import 'package:flutter_course/note_app/screens/note_list_screen.dart';
+import 'package:flutter_course/note_app/screens/splash_screen.dart';
 import 'package:flutter_course/note_app/service/note_service.dart';
 import 'package:realm/realm.dart';
 
@@ -41,7 +41,7 @@ class _NoteAppState extends State<NoteApp> {
       child: MaterialApp(
         title: 'MyNote',
         debugShowCheckedModeBanner: false,
-        home: const NoteListScreen(),
+        home: const NoteSplashScreen(),
         theme: ThemeData.dark(),
       ),
     );
