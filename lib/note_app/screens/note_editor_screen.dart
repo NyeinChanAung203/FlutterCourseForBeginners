@@ -141,6 +141,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                     color: Colors.grey.shade600,
                   ),
                   border: InputBorder.none,
+                  filled: false,
                 ),
               ),
               Padding(
@@ -165,6 +166,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
                     color: Colors.grey.shade600,
                   ),
                   border: InputBorder.none,
+                  filled: false,
                 ),
               ),
             ],

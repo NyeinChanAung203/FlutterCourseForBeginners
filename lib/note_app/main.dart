@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course/note_app/model/note.dart';
 import 'package:flutter_course/note_app/provider/service_provider.dart';
+import 'package:flutter_course/note_app/provider/theme_provider.dart';
 import 'package:flutter_course/note_app/screens/splash_screen.dart';
 import 'package:flutter_course/note_app/service/note_service.dart';
+import 'package:flutter_course/note_app/service/theme_service.dart';
+import 'package:flutter_course/note_app/theme/note_theme.dart';
 import 'package:realm/realm.dart';
 
-void main() {
-  runApp(const NoteApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final themeMode = await ThemeService.getThemeMode();
+  runApp(NoteApp(
+    themeMode: themeMode,
+  ));
 }
 
 class NoteApp extends StatefulWidget {
-  const NoteApp({super.key});
+  const NoteApp({
+    super.key,
+    required this.themeMode,
+  });
+  final ThemeMode themeMode;
 
   @override
   State<NoteApp> createState() => _NoteAppState();
@@ -20,13 +31,24 @@ class _NoteAppState extends State<NoteApp> {
   late final Realm _realm;
   late final NoteService noteService;
 
+  late ThemeMode _themeMode;
+
   @override
   void initState() {
     super.initState();
     var config = Configuration.local([Note.schema]);
     _realm = Realm(config);
     noteService = NoteService(_realm);
+    _themeMode = widget.themeMode;
+    // loadTheme();
   }
+
+  // void loadTheme() async {
+  //   final themeMode = await ThemeService.getThemeMode();
+  //   setState(() {
+  //     _themeMode = themeMode;
+  //   });
+  // }
 
   @override
   void dispose() {
@@ -38,11 +60,27 @@ class _NoteAppState extends State<NoteApp> {
   Widget build(BuildContext context) {
     return ServiceProvider(
       noteService: noteService,
-      child: MaterialApp(
-        title: 'MyNote',
-        debugShowCheckedModeBanner: false,
-        home: const NoteSplashScreen(),
-        theme: ThemeData.dark(),
+      child: ThemeProvider(
+        themeMode: _themeMode,
+        changeTheme: () async {
+          setState(() {
+            if (_themeMode == ThemeMode.light) {
+              _themeMode = ThemeMode.dark;
+            } else {
+              _themeMode = ThemeMode.light;
+            }
+          });
+
+          await ThemeService.setThemeMode(_themeMode);
+        },
+        child: MaterialApp(
+          title: 'MyNote',
+          debugShowCheckedModeBanner: false,
+          home: const NoteSplashScreen(),
+          theme: NoteTheme.lightTheme(),
+          darkTheme: NoteTheme.darkTheme(),
+          themeMode: _themeMode,
+        ),
       ),
     );
   }

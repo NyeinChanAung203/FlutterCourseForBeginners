@@ -42,17 +42,7 @@ class _NoteSearchState extends State<NoteSearch> {
           controller: _controller,
           focusNode: _focusNode,
           decoration: InputDecoration(
-            filled: true,
-            isDense: true,
             hintText: "Search",
-            hintStyle: TextStyle(
-              color: Colors.grey.shade600,
-            ),
-            fillColor: Colors.grey.shade900,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide.none,
-            ),
             suffixIcon: IconButton(
               onPressed: () {
                 _controller.clear();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course/note_app/model/note.dart';
 import 'package:flutter_course/note_app/provider/service_provider.dart';
+import 'package:flutter_course/note_app/provider/theme_provider.dart';
 import 'package:flutter_course/note_app/screens/note_editor_screen.dart';
 import 'package:flutter_course/note_app/screens/note_search.dart';
 import 'package:flutter_course/note_app/service/note_service.dart';
@@ -8,15 +9,26 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:intl/intl.dart';
 
 class NoteListScreen extends StatelessWidget {
-  const NoteListScreen({super.key});
+  const NoteListScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     final NoteService noteService = ServiceProvider.of(context)!.noteService;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Notes"),
+        title: Text(
+          "Notes",
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
         actions: [
+          IconButton(
+            onPressed: () {
+              ThemeProvider.of(context)!.changeTheme();
+            },
+            icon: const Icon(Icons.light_mode),
+          ),
           IconButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
@@ -40,7 +52,7 @@ class NoteListScreen extends StatelessWidget {
           stream: noteService.getAllNotes(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return const CircularProgressIndicator();
+              return const Center(child: CircularProgressIndicator());
             }
 
             final List<Note> allNotes =

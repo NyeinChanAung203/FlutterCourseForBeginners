@@ -6,4 +6,11 @@ Learning Path
 - widget 35-55
 - Login UI
 - Movie UI
-- widgets -> 58-60
+- widgets -> 58-62
+- Note App 
+    - UI
+    - Integrate with Realm
+    - Dependency Injection with InheritedWidget
+    - Splash Screen
+    - Change App Name & Icon
+    - Add Light & Dark Theme (SharedPreferences)
