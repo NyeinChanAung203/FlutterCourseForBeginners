@@ -1,4 +1,7 @@
-Learning Path
+## Learning Path
+
+>  **Note:** You can watch all lessons on **FlutterVerseMyanmar** [YouTube]("https://www.youtube.com/playlist?list=PLIWGEkJHpnwmFFMj_dJLXkJm9olPq-rWZ")
+
 
 - widgets -> 1-28
 - navigation
@@ -14,3 +17,4 @@ Learning Path
     - Splash Screen
     - Change App Name & Icon
     - Add Light & Dark Theme (SharedPreferences)
+- state_management -> provider_course

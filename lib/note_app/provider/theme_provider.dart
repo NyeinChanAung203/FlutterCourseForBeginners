@@ -9,6 +9,7 @@ class ThemeProvider extends InheritedWidget {
   }) : super(child: child);
 
   @override
+  // ignore: overridden_fields
   final Widget child;
   final ThemeMode themeMode;
   final VoidCallback changeTheme;
