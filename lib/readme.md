@@ -18,3 +18,4 @@
     - Change App Name & Icon
     - Add Light & Dark Theme (SharedPreferences)
 - state_management -> provider_course
+- Quiz app

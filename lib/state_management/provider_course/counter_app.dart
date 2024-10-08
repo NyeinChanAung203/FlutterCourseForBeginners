@@ -2,7 +2,6 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_course/state_management/provider_course/counter_provider.dart';
-import 'package:flutter_course/state_management/provider_course/counter_service.dart';
 import 'package:flutter_course/state_management/provider_course/future_provider_demo.dart';
 import 'package:flutter_course/state_management/provider_course/stream_provider_demo.dart';
 import 'package:provider/provider.dart';

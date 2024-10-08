@@ -1,0 +1,309 @@
+{
+    "easyQuestions": [
+      {
+        "question": "What is the capital of France?",
+        "options": ["London", "Berlin", "Paris", "Rome"],
+        "answer": "Paris"
+      },
+      {
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["Earth", "Mars", "Venus", "Jupiter"],
+        "answer": "Mars"
+      },
+      {
+        "question": "Which ocean is the largest in the world?",
+        "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+        "answer": "Pacific Ocean"
+      },
+      {
+        "question": "What is the capital of Italy?",
+        "options": ["Paris", "Rome", "Madrid", "Berlin"],
+        "answer": "Rome"
+      },
+      {
+        "question": "Which animal is known as the king of the jungle?",
+        "options": ["Elephant", "Tiger", "Lion", "Cheetah"],
+        "answer": "Lion"
+      },
+      {
+        "question": "How many days are there in a leap year?",
+        "options": ["365", "366", "364", "367"],
+        "answer": "366"
+      },
+      {
+        "question": "What color is the sky on a clear day?",
+        "options": ["Blue", "Green", "Red", "Yellow"],
+        "answer": "Blue"
+      },
+      {
+        "question": "Which fruit is known as the \"king of fruits\"?",
+        "options": ["Apple", "Banana", "Mango", "Grapes"],
+        "answer": "Mango"
+      },
+      {
+        "question": "How many continents are there in the world?",
+        "options": ["5", "6", "7", "8"],
+        "answer": "7"
+      },
+      {
+        "question": "What is the largest mammal in the world?",
+        "options": ["Elephant", "Blue Whale", "Shark", "Giraffe"],
+        "answer": "Blue Whale"
+      },
+      {
+        "question": "Which month has 28 days in common years?",
+        "options": ["February", "March", "April", "May"],
+        "answer": "February"
+      },
+      {
+        "question": "What is 2 + 2?",
+        "options": ["3", "4", "5", "6"],
+        "answer": "4"
+      },
+      {
+        "question": "What is the color of an emerald?",
+        "options": ["Red", "Blue", "Green", "Yellow"],
+        "answer": "Green"
+      },
+      {
+        "question": "Which shape is a stop sign?",
+        "options": ["Square", "Hexagon", "Octagon", "Triangle"],
+        "answer": "Octagon"
+      },
+      {
+        "question": "What is the main ingredient in guacamole?",
+        "options": ["Banana", "Potato", "Avocado", "Peach"],
+        "answer": "Avocado"
+      },
+      {
+        "question": "Which number comes after 5?",
+        "options": ["3", "4", "6", "7"],
+        "answer": "6"
+      },
+      {
+        "question": "What type of tree do acorns come from?",
+        "options": ["Oak", "Pine", "Birch", "Maple"],
+        "answer": "Oak"
+      },
+      {
+        "question": "What does a thermometer measure?",
+        "options": ["Wind speed", "Height", "Temperature", "Speed"],
+        "answer": "Temperature"
+      },
+      {
+        "question": "How many wheels does a tricycle have?",
+        "options": ["1", "2", "3", "4"],
+        "answer": "3"
+      },
+      {
+        "question": "What animal is known for its black and white stripes?",
+        "options": ["Lion", "Elephant", "Zebra", "Tiger"],
+        "answer": "Zebra"
+      }
+    ],
+    "mediumQuestions": [
+      {
+        "question": "Who wrote the novel \"1984\"?",
+        "options": ["George Orwell", "J.R.R. Tolkien", "Ernest Hemingway", "F. Scott Fitzgerald"],
+        "answer": "George Orwell"
+      },
+      {
+        "question": "What is the smallest prime number?",
+        "options": ["1", "2", "3", "5"],
+        "answer": "2"
+      },
+      {
+        "question": "Which gas is most abundant in the Earth's atmosphere?",
+        "options": ["Oxygen", "Hydrogen", "Nitrogen", "Carbon Dioxide"],
+        "answer": "Nitrogen"
+      },
+      {
+        "question": "What is the freezing point of water in Celsius?",
+        "options": ["0°C", "32°C", "100°C", "-1°C"],
+        "answer": "0°C"
+      },
+      {
+        "question": "Who painted the \"Mona Lisa\"?",
+        "options": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"],
+        "answer": "Leonardo da Vinci"
+      },
+      {
+        "question": "Which country is known as the Land of the Rising Sun?",
+        "options": ["China", "Japan", "Thailand", "Korea"],
+        "answer": "Japan"
+      },
+      {
+        "question": "How many bones are there in the human body?",
+        "options": ["206", "208", "210", "204"],
+        "answer": "206"
+      },
+      {
+        "question": "Which element is represented by the symbol \"O\"?",
+        "options": ["Oxygen", "Osmium", "Gold", "Silver"],
+        "answer": "Oxygen"
+      },
+      {
+        "question": "What is the hardest natural substance on Earth?",
+        "options": ["Gold", "Iron", "Diamond", "Graphite"],
+        "answer": "Diamond"
+      },
+      {
+        "question": "Which city hosted the 2016 Summer Olympics?",
+        "options": ["Tokyo", "Beijing", "London", "Rio de Janeiro"],
+        "answer": "Rio de Janeiro"
+      },
+      {
+        "question": "Who is the author of the Harry Potter series?",
+        "options": ["J.K. Rowling", "Stephen King", "J.R.R. Tolkien", "C.S. Lewis"],
+        "answer": "J.K. Rowling"
+      },
+      {
+        "question": "What is the capital of Canada?",
+        "options": ["Toronto", "Vancouver", "Ottawa", "Montreal"],
+        "answer": "Ottawa"
+      },
+      {
+        "question": "Which planet is closest to the sun?",
+        "options": ["Venus", "Mercury", "Mars", "Earth"],
+        "answer": "Mercury"
+      },
+      {
+        "question": "How many continents are there?",
+        "options": ["5", "6", "7", "8"],
+        "answer": "7"
+      },
+      {
+        "question": "What is the largest bone in the human body?",
+        "options": ["Femur", "Tibia", "Fibula", "Humerus"],
+        "answer": "Femur"
+      },
+      {
+        "question": "What is the most common blood type?",
+        "options": ["O+", "A+", "B+", "AB-"],
+        "answer": "O+"
+      },
+      {
+        "question": "Who discovered gravity?",
+        "options": ["Galileo", "Albert Einstein", "Isaac Newton", "Nikola Tesla"],
+        "answer": "Isaac Newton"
+      },
+      {
+        "question": "Which planet has the most moons?",
+        "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+        "answer": "Jupiter"
+      },
+      {
+        "question": "How many degrees are in a circle?",
+        "options": ["90", "180", "270", "360"],
+        "answer": "360"
+      },
+      {
+        "question": "What is the largest island in the world?",
+        "options": ["Greenland", "Australia", "Iceland", "New Zealand"],
+        "answer": "Greenland"
+      }
+    ],
+    "hardQuestions": [
+      {
+        "question": "Who developed the theory of general relativity?",
+        "options": ["Isaac Newton", "Albert Einstein", "Stephen Hawking", "Galileo Galilei"],
+        "answer": "Albert Einstein"
+      },
+      {
+        "question": "Which country has won the most FIFA World Cup titles?",
+        "options": ["Germany", "Argentina", "Brazil", "Italy"],
+        "answer": "Brazil"
+      },
+      {
+        "question": "What is the chemical formula for table salt?",
+        "options": ["NaCl", "KCl", "H2O", "CO2"],
+        "answer": "NaCl"
+      },
+      {
+        "question": "Who is the author of \"The Brothers Karamazov\"?",
+        "options": ["Fyodor Dostoevsky", "Leo Tolstoy", "Anton Chekhov", "Nikolai Gogol"],
+        "answer": "Fyodor Dostoevsky"
+      },
+      {
+        "question": "Which element has the atomic number 1?",
+        "options": ["Helium", "Hydrogen", "Oxygen", "Carbon"],
+        "answer": "Hydrogen"
+      },
+      {
+        "question": "What is the capital of Australia?",
+        "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+        "answer": "Canberra"
+      },
+      {
+        "question": "Who discovered penicillin?",
+        "options": ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Gregor Mendel"],
+        "answer": "Alexander Fleming"
+      },
+      {
+        "question": "What is the SI unit of electrical resistance?",
+        "options": ["Ohm", "Watt", "Volt", "Ampere"],
+        "answer": "Ohm"
+      },
+      {
+        "question": "Who was the first person to walk on the moon?",
+        "options": ["Yuri Gagarin", "Buzz Aldrin", "Neil Armstrong", "Michael Collins"],
+        "answer": "Neil Armstrong"
+      },
+      {
+        "question": "Which continent is the Sahara Desert located in?",
+        "options": ["Asia", "Africa", "Australia", "North America"],
+        "answer": "Africa"
+      },
+      {
+        "question": "What is the longest river in the world?",
+        "options": ["Amazon River", "Nile River", "Yangtze River", "Mississippi River"],
+        "answer": "Nile River"
+      },
+      {
+        "question": "Who invented the telephone?",
+        "options": ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "James Watt"],
+        "answer": "Alexander Graham Bell"
+      },
+      {
+        "question": "What is the speed of light in vacuum?",
+        "options": ["299,792 km/s", "299,792 m/s", "300,000 km/h", "300,000 m/s"],
+        "answer": "299,792 km/s"
+      },
+      {
+        "question": "What is the atomic number of oxygen?",
+        "options": ["6", "7", "8", "9"],
+        "answer": "8"
+      },
+      {
+        "question": "Who painted the \"Starry Night\"?",
+        "options": ["Vincent van Gogh", "Claude Monet", "Pablo Picasso", "Salvador Dali"],
+        "answer": "Vincent van Gogh"
+      },
+      {
+        "question": "What is the second-largest country by land area?",
+        "options": ["USA", "China", "Canada", "Russia"],
+        "answer": "Canada"
+      },
+      {
+        "question": "Which element is represented by the symbol \"Au\"?",
+        "options": ["Gold", "Silver", "Iron", "Copper"],
+        "answer": "Gold"
+      },
+      {
+        "question": "Who wrote \"Crime and Punishment\"?",
+        "options": ["Fyodor Dostoevsky", "Leo Tolstoy", "Anton Chekhov", "Vladimir Nabokov"],
+        "answer": "Fyodor Dostoevsky"
+      },
+      {
+        "question": "What is the capital of Turkey?",
+        "options": ["Istanbul", "Ankara", "Izmir", "Antalya"],
+        "answer": "Ankara"
+      },
+      {
+        "question": "Which scientist proposed the three laws of motion?",
+        "options": ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Marie Curie"],
+        "answer": "Isaac Newton"
+      }
+    ]
+}
+  
