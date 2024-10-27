@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_course/requests/post.dart';
+import 'package:flutter_course/data_fetching/post.dart';
 import 'package:http/http.dart' as http;
 
 class PostDetail extends StatefulWidget {

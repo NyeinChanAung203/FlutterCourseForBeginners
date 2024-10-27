@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_course/requests/post.dart';
-import 'package:flutter_course/requests/post_detail.dart';
+import 'package:flutter_course/data_fetching/post.dart';
+import 'package:flutter_course/data_fetching/post_detail.dart';
 import 'package:http/http.dart' as http;
 
 class PostList extends StatefulWidget {

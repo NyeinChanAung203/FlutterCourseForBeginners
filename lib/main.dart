@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/requests/post_list.dart';
+import 'package:flutter_course/data_fetching/post_list.dart';
 
 void main() {
   runApp(const MyApp());
