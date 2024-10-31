@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/widgets/ex62_streambuilder.dart';
+import 'package:flutter_course/data_fetching/post_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Flutter Course',
       debugShowCheckedModeBanner: false,
-      home: Ex62Streambuilder(),
+      home: PostList(),
     );
   }
 }

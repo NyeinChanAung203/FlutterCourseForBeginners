@@ -19,3 +19,15 @@ class QuizApp extends StatelessWidget {
     );
   }
 }
+
+
+//** Assignment */
+// - add alert dialog to confirm submit data or not
+// - save history_data in local database
+// - add history button in home page
+// - create history page
+// - show saved history_data in history page
+// history_data
+//    - dataTime
+//    - score [10/100]
+//    - level
